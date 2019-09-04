@@ -12,7 +12,7 @@ Picreferer = {
     'Referer': 'http://i.meizitu.net'
 }
 
-path = "/Users/wangyue/Desktop/PicTest/./";
+path = "C:\\Github\\91Result\\";
 
 def get_page_name(url):  # 获得图集最大页数和名称
     html = get_html(url)
@@ -37,6 +37,7 @@ def get_img_url(url, name):
 
 def save_img(img_url, count, name):
     req = requests.get(img_url, headers=Picreferer)
+    print(img_url)
     new_name = rename(name)
     with open(path+new_name + '/' + str(count) + '.jpg', 'wb') as f:
         f.write(req.content)
@@ -70,6 +71,7 @@ def get_atlas_list(url):
     atlas = soup.find_all(attrs={'class': 'lazy'})
     atlas_list = []
     for atla in atlas:
+        print(atla)
         atlas_list.append(atla.parent['href'])
     return atlas_list
 
