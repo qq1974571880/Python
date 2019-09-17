@@ -12,12 +12,13 @@ Picreferer = {
     'Referer': 'http://i.meizitu.net'
 }
 
-path = "C:\\Github\\91Result\\";
+path = "C:\\Share\\CLResult\\";
 
-basicUrl = "http://www.91ta.xyz"
-startPath = basicUrl + "/list-read-id-34-p-"
+basicUrl = "https://cl.bbcb.xyz"
+startPath = basicUrl + "/thread0806.php?fid=16"
 
-maxPage = 91
+stopCount = 0
+maxPage = 100
 
 def get_html(url):  # 获得总页面html代码
     req = requests.get(url, headers=Hostreferer)
@@ -78,13 +79,14 @@ def save_one_page(url):
 if __name__ == '__main__':
     try:
         for count in range(0, maxPage):
+            stopCount = count + 1
             print("当前爬取到" + str(count+1) + "页")
-            url = startPath + str(count+1) + ".html"
+            url = startPath + "&search=&page=" + str(count+1)
             print(url)
             save_one_page(url)
+
     finally:
         print("爬取完成")
-        os.system("shutdown -s -t 10")
+        print("停止在" + stopCount + "页")
+        # os.system("shutdown -s -t 10")
 
-    #http://91tj.xyz/list-read-id-34-p-24.html
-    #http://www.91ta.xyz/list-read-id-34-p-24.html
