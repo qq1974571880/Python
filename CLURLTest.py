@@ -1,4 +1,4 @@
-# coding:gbk
+# coding: utf-8
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -7,50 +7,60 @@ import time
 
 Hostreferer = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
-}
-Picreferer = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
-}
 
+}
 path = "C:\\Share\\CLResult\\";
 txtPath = "C:\\Github\\CLTxtTest\\"
 
-basicUrl = "https://cl.bbcb.xyz"
+# basicUrl = "https://cl.bbcb.xyz"
+basicUrl = "https://cc.vttg.pw"
 startPath = basicUrl + "/thread0806.php?fid=16"
 
 stopCount = 0
-maxPage = 88
+maxPage = 1
 minPage = 0
 nowPage = 0
 
 
+def getMaxPage():
+    maxPagePath = "SaveData.txt"
+    file = open(maxPagePath)
+    max = file.read()
+    file.close()
+    return int(max)
+
+
 def open_URL(url):
     try:
-        req = requests.get(url, headers=Hostreferer, stream=True,timeout=20)
+        # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
+        req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
         req.encoding = "gbk"
         if req.status_code == 200:
             return req
     except Exception as e:
-        print("except",e)
+        print("except", e)
         for i in range(1, 10):
-            print('ÇëÇó³¬Ê±£¬µÚ%s´ÎÖØ¸´ÇëÇó' % i)
+            print('è¯·æ±‚è¶…æ—¶ï¼Œç¬¬%sæ¬¡é‡å¤è¯·æ±‚' % i)
+            # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
             req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
             req.encoding = "gbk"
             if req.status_code == 200:
                 return req
         time.sleep(10)
+        # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
         req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
         req.encoding = "gbk"
         if req.status_code == 200:
             return req
 
 
-
-def get_html(htmlUrl):  # »ñµÃ×ÜÒ³Ãæhtml´úÂë
+# è·å¾—æ€»é¡µé¢htmlä»£ç 
+def get_html(htmlUrl):
     req = open_URL(htmlUrl)
     html = ""
     try:
         html = req.text
+        req.close()
     except Exception as e:
         print("except", e)
         time.sleep(10)
@@ -58,18 +68,6 @@ def get_html(htmlUrl):  # »ñµÃ×ÜÒ³Ãæhtml´úÂë
         html = req.text
     return html
 
-
-# ±£´æµ¥ÕÅÍ¼Æ¬
-
-def save_img(img_url, count, name):
-    req = open_URL(img_url)
-    new_name = rename(name)
-    print()
-    name = ".jpg"
-    if ".gif" in img_url:
-        return
-    with open(path+new_name + '/' + str(count) + name, 'wb') as f:
-        f.write(req.content)
 
 def rename(name):
     rstr = r'[\/\\\:\*\?\<\>\|]'
@@ -81,9 +79,13 @@ def saveTxt(name, datgaList):
     if "\\" in name:
         print(name)
         name = name.replace('\\', '')
-    file = open(txtPath + name, 'w+')
-    for oneData in datgaList:
-        file.write(oneData.replace(u'\xa0', u'') + "\n")
+    try:
+        file = open(txtPath + name, 'w+')
+        for oneData in datgaList:
+            file.write(oneData.replace(u'\xa0', u'') + "\n")
+    except Exception as e:
+        print(name)
+        print("except", e)
 
 
 def saveOneAlbumText(url, name):
@@ -93,36 +95,14 @@ def saveOneAlbumText(url, name):
         soup = BeautifulSoup(html, 'html.parser')
         imgs = soup.findAll("input", {"type": "image"})
         urlList = []
-        print("µÚ" + str(nowPage + 1) + "Ò³")
-        print("Í¼¼¯--" + name + "--¿ªÊ¼±£´æ")
+        print("ç¬¬" + str(nowPage + 1) + "é¡µ")
+        print("å›¾é›†--" + name + "--å¼€å§‹ä¿å­˜")
         for i in range(0, len(imgs)):
             urlList.append(imgs[i].get('data-src'))
         saveTxt(new_name+".txt", urlList)
-        print("Í¼¼¯--" + name + "±£´æ³É¹¦")
+        print("å›¾é›†--" + name + "ä¿å­˜æˆåŠŸ")
     else:
-        print(new_name + "ÒÑ´æÔÚ")
-
-
-def saveOneAlbum(url,name):
-    new_name = rename(name)
-    if new_name not in os.listdir(path):
-        html = get_html(url)
-        soup = BeautifulSoup(html, 'html.parser')
-        print(url)
-        os.mkdir(path + new_name)
-        print("µÚ" + str(nowPage +1) + "Ò³")
-        print("Í¼¼¯--" + name + "--¿ªÊ¼±£´æ")
-        imgs = soup.findAll("input",{"type":"image"})
-        for i in range(0,len(imgs)):
-            try:
-                save_img(imgs[i].get('data-src'), i + 1, name)
-                print('ÕıÔÚ±£´æµÚ' + str(i + 1) + 'ÕÅÍ¼Æ¬')
-            except Exception as e:
-                print("except",e)
-                continue
-        print("Í¼¼¯--" + name + "±£´æ³É¹¦")
-    else:
-        print(new_name + "ÒÑ´æÔÚ")
+        print(new_name + "å·²å­˜åœ¨")
 
 
 def findAllAlbum(url):
@@ -144,26 +124,33 @@ def save_one_page(url):
     urls = results[0]
     names = results[1]
     for i in range(0, len(urls)):
-        # saveOneAlbum(urls[i],names[i])
-        saveOneAlbumText(urls[i],names[i])
+        saveOneAlbumText(urls[i], names[i])
+        time.sleep(0.1)
 
 
 def saveData():
     file = open("SaveData.txt", 'w+')
     file.write(str(nowPage))
 
+
+def saveErrorMessage(message):
+    file = open("ErrorMessage.txt", 'w+')
+    file.write(message)
+
 if __name__ == '__main__':
     try:
-        # for count in range(minPage, maxPage):
-        for count in range(maxPage,minPage,-1):
+        # maxPage = getMaxPage()
+        stopCount = maxPage
+        for count in range(minPage, maxPage):
             stopCount = count + 1
             nowPage = count
             url = startPath + "&search=&page=" + str(count+1)
             save_one_page(url)
-
+    except Exception as e:
+        saveErrorMessage(e)
     finally:
-        print("ÅÀÈ¡Íê³É")
-        print("Í£Ö¹ÔÚ" + str(stopCount) + "Ò³")
+        print("çˆ¬å–å®Œæˆ")
+        print("åœæ­¢åœ¨" + str(stopCount) + "é¡µ")
         saveData()
         # os.system("shutdown -s -t 10")
 
