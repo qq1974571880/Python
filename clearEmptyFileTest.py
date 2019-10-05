@@ -17,13 +17,14 @@ def deleteOneFolder(folderPath):
             print(fileSpace)
             print("======")
             os.remove(filePath)
-    print("删除完成")
+
 
 
 lists = os.listdir(basicPath)
 for doc in lists:
     docPath = basicPath + "\\" + doc
     deleteOneFolder(docPath)
+print("删除完成")
 
 
 

@@ -4,20 +4,21 @@ from bs4 import BeautifulSoup
 import os
 import re
 import time
+import datetime
 
 Hostreferer = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
 
 }
-path = "C:\\Share\\CLResult\\";
+
+localBasicPath = "C:\\Github\\CLTxtTest\\"
 txtPath = "C:\\Github\\CLTxtTest\\"
 
-# basicUrl = "https://cl.bbcb.xyz"
 basicUrl = "https://cc.vttg.pw"
 startPath = basicUrl + "/thread0806.php?fid=16"
 
 stopCount = 0
-maxPage = 1
+maxPage = 20
 minPage = 0
 nowPage = 0
 
@@ -33,22 +34,22 @@ def getMaxPage():
 def open_URL(url):
     try:
         # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
-        req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
+        req = requests.get(url, headers=Hostreferer, stream=True, timeout=30)
         req.encoding = "gbk"
         if req.status_code == 200:
             return req
     except Exception as e:
         print("except", e)
-        for i in range(1, 10):
-            print('请求超时，第%s次重复请求' % i)
-            # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
-            req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
-            req.encoding = "gbk"
-            if req.status_code == 200:
-                return req
-        time.sleep(10)
-        # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
-        req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
+    #     for i in range(1, 10):
+    #         print('请求超时，第%s次重复请求' % i)
+    #         # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
+    #         req = requests.get(url, headers=Hostreferer, stream=True, timeout=30)
+    #         req.encoding = "gbk"
+    #         if req.status_code == 200:
+    #             return req
+        time.sleep(50)
+    #     # req = requests.get(url, headers=Hostreferer, stream=True, timeout=20, proxies=proxies)
+        req = requests.get(url, headers=Hostreferer, stream=True, timeout=30)
         req.encoding = "gbk"
         if req.status_code == 200:
             return req
@@ -88,9 +89,10 @@ def saveTxt(name, datgaList):
         print("except", e)
 
 
-def saveOneAlbumText(url, name):
+def saveOneAlbumText(url, name,compareList):
     new_name = rename(name)
-    if new_name+".txt" not in os.listdir(txtPath):
+    # os.listdir(txtPath):
+    if new_name+".txt" not in compareList:
         html = get_html(url)
         soup = BeautifulSoup(html, 'html.parser')
         imgs = soup.findAll("input", {"type": "image"})
@@ -101,8 +103,10 @@ def saveOneAlbumText(url, name):
             urlList.append(imgs[i].get('data-src'))
         saveTxt(new_name+".txt", urlList)
         print("图集--" + name + "保存成功")
+        return 0
     else:
         print(new_name + "已存在")
+        return 1
 
 
 def findAllAlbum(url):
@@ -118,39 +122,71 @@ def findAllAlbum(url):
         urlList.append(basicUrl+"/"+album.h3.a.get('href'))
     return urlList, nameList
 
-def save_one_page(url):
+def save_one_page(url, compareList):
 
     results = findAllAlbum(url)
     urls = results[0]
     names = results[1]
+    allURLLists = 0
     for i in range(0, len(urls)):
-        saveOneAlbumText(urls[i], names[i])
+        allURLLists += saveOneAlbumText(urls[i], names[i], compareList)
         time.sleep(0.1)
-
+    print("====================")
+    print(allURLLists)
+    print(len(urls))
+    print("====================")
+    if allURLLists == len(urls):
+        print("已下载到完结页")
+        return True
+    else:
+        return False
 
 def saveData():
     file = open("SaveData.txt", 'w+')
     file.write(str(nowPage))
 
 
-def saveErrorMessage(message):
-    file = open("ErrorMessage.txt", 'w+')
-    file.write(message)
+def canCreateNewFolder(path):
+    if str(datetime.date.today()) not in os.listdir(path):
+        return True
+    else:
+        return False
+
+
+def getAllFileFromOneFolder(path):
+    fileList = os.listdir(path)
+    return fileList
+
+
+def getAllfile(path):
+    folderList = os.listdir(path)
+    compareList = []
+    for folderName in folderList:
+        fileList = getAllFileFromOneFolder(localBasicPath + folderName)
+        compareList += fileList
+    return compareList
+
 
 if __name__ == '__main__':
-    try:
-        # maxPage = getMaxPage()
-        stopCount = maxPage
-        for count in range(minPage, maxPage):
-            stopCount = count + 1
-            nowPage = count
-            url = startPath + "&search=&page=" + str(count+1)
-            save_one_page(url)
-    except Exception as e:
-        saveErrorMessage(e)
-    finally:
-        print("爬取完成")
-        print("停止在" + str(stopCount) + "页")
-        saveData()
-        # os.system("shutdown -s -t 10")
+    compareList = getAllfile(localBasicPath)
+    if canCreateNewFolder(txtPath):
+        txtPath += str(datetime.date.today()) + "\\"
+        os.mkdir(txtPath)
+        try:
+            stopCount = maxPage
+            for count in range(minPage, maxPage):
+                stopCount = count + 1
+                nowPage = count
+                url = startPath + "&search=&page=" + str(count + 1)
+                if save_one_page(url, compareList):
+                    break
+        except Exception as e:
+            print("爬取完成")
+            print("停止在" + str(stopCount) + "页")
+            # saveData()
+            # os.system("shutdown -s -t 10")
+        print("下载完成")
+    else:
+        print(str(datetime.date.today()) + "文件夹已存在")
+
 

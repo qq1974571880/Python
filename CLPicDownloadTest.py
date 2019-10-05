@@ -2,16 +2,19 @@ import requests
 import os
 import re
 import time
+import datetime
+import multiprocessing
 
 Hostreferer = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/77.0.3865.90 Safari/537.36',
 }
 
 picPath = "D:\\Share\\CLResult"
-txtPath = "C:\\Github\\CLTxtTest"
+txtPath = "C:\\Github\\CLTxtTest\\" + str(datetime.date.today())
 
 nowPicCount = 0
 
+urlList = []
 
 def open_url(url):
     # try:
@@ -26,6 +29,8 @@ def save_img(img_url, count, path):
     if "gif" in img_url:
         return
     req = open_url(img_url)
+    print(path + "正在保存" + str(count))
+    # print("保存进度" + str(count) )
     with open(path + '/' + str(count) + '.jpg', 'wb') as f:
         # try:
         f.write(req.content)
@@ -42,12 +47,16 @@ def saveAlbum(name, picList):
         os.mkdir(picPath + "\\" + name)
         # 3.针对list调用保存单张图片
         picNum = len(picList)
+
+        albumList = []
         for i in range(0, picNum):
-            try:
-                print("保存进度" + str(i + 1) + "/" + str(picNum))
-                save_img(picList[i], i + 1, picPath + "\\" + name)
-            except Exception as e:
-                continue
+            # try:
+                albumList.append([picList[i], i+1, picPath + "\\" + name])
+                # print("保存进度" + str(i + 1) + "/" + str(picNum))
+                # save_img(picList[i], i + 1, picPath + "\\" + name)
+            # except Exception as e:
+            #     continue
+        urlList.append(albumList)
     else:
         print("文件已存在")
 
@@ -86,6 +95,14 @@ if __name__ == '__main__':
             lines = getURLLists(txtPath + "\\" + txtLists[i])
             saveAlbum(folderName, lines)
             print("-------------------------------")
+
+        pool = multiprocessing.Pool(processes=100)
+        for i in range(0,len(urlList)):
+            for j in range(0,len(urlList[i])):
+                pool.apply_async(save_img, (urlList[i][j][0], urlList[i][j][1], urlList[i][j][2]))
+        pool.close()
+        pool.join()
+        print("下载完毕")
     except Exception as e:
         saveData()
         print("mainError:" + e)
