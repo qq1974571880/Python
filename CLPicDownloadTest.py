@@ -41,6 +41,7 @@ def save_img(img_url, count, path):
 
 
 def saveAlbum(name, picList):
+
     # 1.判断地址有无同名文件夹
     if name not in os.listdir(picPath):
         # 2.创建文件夹

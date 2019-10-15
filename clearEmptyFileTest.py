@@ -9,9 +9,6 @@ def deleteOneFolder(folderPath):
     for file in lists:
         filePath = folderPath + "\\" + file
         fileSpace = os.path.getsize(filePath)
-        # print(file)
-        # print(fileSpace)
-        # print("======")
         if fileSpace == 0:
             print(filePath)
             print(fileSpace)
@@ -23,7 +20,8 @@ def deleteOneFolder(folderPath):
 lists = os.listdir(basicPath)
 for doc in lists:
     docPath = basicPath + "\\" + doc
-    deleteOneFolder(docPath)
+    if "." not in docPath:
+        deleteOneFolder(docPath)
 print("删除完成")
 
 
