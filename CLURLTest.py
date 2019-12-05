@@ -14,7 +14,7 @@ Hostreferer = {
 localBasicPath = "C:\\Github\\CLTxtTest\\"
 txtPath = "C:\\Github\\CLTxtTest\\"
 
-basicUrl = "https://cc.vttg.pw"
+basicUrl = "https://cb.wpio.xyz"
 startPath = basicUrl + "/thread0806.php?fid=16"
 
 stopCount = 0
@@ -89,13 +89,14 @@ def saveTxt(name, datgaList):
         print("except", e)
 
 
-def saveOneAlbumText(url, name,compareList):
+def saveOneAlbumText(url, name, compareList):
     new_name = rename(name)
     # os.listdir(txtPath):
     if new_name+".txt" not in compareList:
         html = get_html(url)
         soup = BeautifulSoup(html, 'html.parser')
-        imgs = soup.findAll("input", {"type": "image"})
+        # imgs = soup.findAll("input", {"type": "image"})
+        imgs = soup.findAll("img")
         urlList = []
         print("第" + str(nowPage + 1) + "页")
         print("图集--" + name + "--开始保存")
