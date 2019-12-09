@@ -1,0 +1,3 @@
+case,xx,yy,expectedResults,comments,remarks
+case1, ,none,"x1,y1",com1,rem1
+case2,x2,None,"x2,y2",com2,rem2
