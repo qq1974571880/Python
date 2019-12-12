@@ -7,7 +7,7 @@ class Node:
 
     # 为data赋值
     def setData(self, data):
-        self.setData(data)
+        self.data = data
 
     # 获取data的值
     def getData(self):
@@ -34,7 +34,7 @@ class LinkedList:
 
     # 检测目录是否位于链表内
     def checkInLinkedList(self, index):
-        return True if index < self.getLinkListLength() else False
+        return True if self.getLinkListLength() > index >= 0 else False
 
     # 寻找指定坐标的前一个节点
     def getFrontNodeByIndex(self, index) -> Node:
@@ -68,10 +68,15 @@ class LinkedList:
         if index == length:
             self.appendNode(node)
         else:
-            frontTmp = self.getFrontNodeByIndex(index)
-            currentTmp = frontTmp.getNext()
-            node.setNode(currentTmp)
-            frontTmp.setNode(node)
+            if index == 0:
+                tmp = self.header
+                node.setNode(tmp)
+                self.header = node
+            else:
+                frontTmp = self.getFrontNodeByIndex(index)
+                currentTmp = frontTmp.getNext()
+                node.setNode(currentTmp)
+                frontTmp.setNode(node)
         return True
 
     # 删除指定坐标的元素
@@ -83,22 +88,18 @@ class LinkedList:
                 frontTmp = self.getFrontNodeByIndex(index)
                 currentTmp = frontTmp.getNext()
                 frontTmp.setNode(currentTmp.getNext())
-            return True
-        else:
-            return False
 
     # 删除指定data的元素
     def deleteNodeByData(self, data):
         currentTmp = self.header
         frontTmp = self.header
         while currentTmp is not None:
-            frontTmp = currentTmp
             if data == currentTmp.data:
                 frontTmp.setNode(currentTmp.getNext())
-                return True
+                break
             else:
+                frontTmp = currentTmp
                 currentTmp = currentTmp.getNext()
-        return False
 
     # 依据坐标修正data
     def updateDataByIndex(self, index, data):
@@ -135,15 +136,13 @@ class LinkedList:
 
     # 输出链表全部元素
     def printNode(self):
+        resultList = []
         if self.header is not None:
             currentTmp = self.header
-            printList  = []
             while currentTmp is not None:
-                printList.append(currentTmp.data)
+                resultList.append(currentTmp.data)
                 currentTmp = currentTmp.next
-            print(printList)
-        else:
-            print("链表为空")
+        return resultList
 
     # 清空链表
     def clear(self):

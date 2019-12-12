@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a8973ceb-fd4e-4ec2-bc10-f43912b0e41a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/91Test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApacheTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLURLTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/CLURLTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaoLiuTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaoLiuTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Garbage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MeiZiTuTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonTest/myUnitTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python数据结构/链表/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python数据结构/链表/LinkedList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python数据结构/链表/LinkedListTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python数据结构/链表/LinkedListTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clearEmptyFileTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exifreadTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiprocessingTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python爬虫/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CLURLTest">
+  <component name="RunManager" selected="Python.LinkedListTest">
     <configuration name="CLURLTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -208,9 +198,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.LinkedListTest" />
         <item itemvalue="Python.CLURLTest" />
         <item itemvalue="Python.getFileName" />
-        <item itemvalue="Python.LinkedListTest" />
         <item itemvalue="Python.stack" />
         <item itemvalue="Python.Queue" />
       </list>
@@ -276,7 +266,7 @@
       <workItem from="1575864762959" duration="1742000" />
       <workItem from="1576037950597" duration="466000" />
       <workItem from="1576038933020" duration="180000" />
-      <workItem from="1576152326073" duration="428000" />
+      <workItem from="1576152326073" duration="8599000" />
     </task>
     <servers />
   </component>
@@ -412,7 +402,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest21.coverage" NAME="CLPicDownloadTest21 Coverage Results" MODIFIED="1569321373799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest112.coverage" NAME="CLPicDownloadTest112 Coverage Results" MODIFIED="1569324411881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$91Test.coverage" NAME="91Test Coverage Results" MODIFIED="1568210989406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$CLURLTest.coverage" NAME="CLURLTest Coverage Results" MODIFIED="1576152489321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$CLURLTest.coverage" NAME="CLURLTest Coverage Results" MODIFIED="1576153866929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest18.coverage" NAME="CLPicDownloadTest18 Coverage Results" MODIFIED="1569321283398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest24.coverage" NAME="CLPicDownloadTest24 Coverage Results" MODIFIED="1569321381986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1575552384564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python数据结构" />
@@ -426,7 +416,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest15.coverage" NAME="CLPicDownloadTest15 Coverage Results" MODIFIED="1569321025108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest43.coverage" NAME="CLPicDownloadTest43 Coverage Results" MODIFIED="1569321712341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest90.coverage" NAME="CLPicDownloadTest90 Coverage Results" MODIFIED="1569324224054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$LinkedListTest.coverage" NAME="LinkedListTest Coverage Results" MODIFIED="1576038345455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python数据结构/链表" />
+    <SUITE FILE_PATH="coverage/Python$LinkedListTest.coverage" NAME="LinkedListTest Coverage Results" MODIFIED="1576161760004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python数据结构/链表" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest9.coverage" NAME="CLPicDownloadTest9 Coverage Results" MODIFIED="1569285338392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$clearEmptyFileTest.coverage" NAME="clearEmptyFileTest Coverage Results" MODIFIED="1575377585747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest78.coverage" NAME="CLPicDownloadTest78 Coverage Results" MODIFIED="1569324170840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
