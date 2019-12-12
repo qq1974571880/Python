@@ -33,7 +33,7 @@ def open_URL(url):
     except Exception as e:
         print("except",e)
         for i in range(1, 10):
-            print('ÇëÇó³¬Ê±£¬µÚ%s´ÎÖØ¸´ÇëÇó' % i)
+            print('ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½%sï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½' % i)
             req = requests.get(url, headers=Hostreferer, stream=True, timeout=20)
             req.encoding = "gbk"
             if req.status_code == 200:
@@ -46,7 +46,7 @@ def open_URL(url):
 
 
 
-def get_html(htmlUrl):  # »ñµÃ×ÜÒ³Ãæhtml´úÂë
+def get_html(htmlUrl):  # ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½htmlï¿½ï¿½ï¿½ï¿½
     req = open_URL(htmlUrl)
     html = ""
     try:
@@ -59,7 +59,7 @@ def get_html(htmlUrl):  # »ñµÃ×ÜÒ³Ãæhtml´úÂë
     return html
 
 
-# ±£´æµ¥ÕÅÍ¼Æ¬
+# ï¿½ï¿½ï¿½æµ¥ï¿½ï¿½Í¼Æ¬
 
 def save_img(img_url, count, name):
     req = open_URL(img_url)
@@ -93,14 +93,14 @@ def saveOneAlbumText(url, name):
         soup = BeautifulSoup(html, 'html.parser')
         imgs = soup.findAll("input", {"type": "image"})
         urlList = []
-        print("µÚ" + str(nowPage + 1) + "Ò³")
-        print("Í¼¼¯--" + name + "--¿ªÊ¼±£´æ")
+        print("ï¿½ï¿½" + str(nowPage + 1) + "Ò³")
+        print("Í¼ï¿½ï¿½--" + name + "--ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½")
         for i in range(0, len(imgs)):
             urlList.append(imgs[i].get('data-src'))
         saveTxt(new_name+".txt", urlList)
-        print("Í¼¼¯--" + name + "±£´æ³É¹¦")
+        print("Í¼ï¿½ï¿½--" + name + "ï¿½ï¿½ï¿½ï¿½É¹ï¿½")
     else:
-        print(new_name + "ÒÑ´æÔÚ")
+        print(new_name + "ï¿½Ñ´ï¿½ï¿½ï¿½")
 
 
 def saveOneAlbum(url,name):
@@ -110,19 +110,19 @@ def saveOneAlbum(url,name):
         soup = BeautifulSoup(html, 'html.parser')
         print(url)
         os.mkdir(path + new_name)
-        print("µÚ" + str(nowPage +1) + "Ò³")
-        print("Í¼¼¯--" + name + "--¿ªÊ¼±£´æ")
+        print("ï¿½ï¿½" + str(nowPage +1) + "Ò³")
+        print("Í¼ï¿½ï¿½--" + name + "--ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½")
         imgs = soup.findAll("input",{"type":"image"})
         for i in range(0,len(imgs)):
             try:
                 save_img(imgs[i].get('data-src'), i + 1, name)
-                print('ÕýÔÚ±£´æµÚ' + str(i + 1) + 'ÕÅÍ¼Æ¬')
+                print('ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½' + str(i + 1) + 'ï¿½ï¿½Í¼Æ¬')
             except Exception as e:
                 print("except",e)
                 continue
-        print("Í¼¼¯--" + name + "±£´æ³É¹¦")
+        print("Í¼ï¿½ï¿½--" + name + "ï¿½ï¿½ï¿½ï¿½É¹ï¿½")
     else:
-        print(new_name + "ÒÑ´æÔÚ")
+        print(new_name + "ï¿½Ñ´ï¿½ï¿½ï¿½")
 
 
 def findAllAlbum(url):
@@ -147,11 +147,6 @@ def save_one_page(url):
         # saveOneAlbum(urls[i],names[i])
         saveOneAlbumText(urls[i],names[i])
 
-
-def saveData():
-    file = open("SaveData.txt", 'w+')
-    file.write(str(nowPage))
-
 if __name__ == '__main__':
     try:
         # for count in range(minPage, maxPage):
@@ -162,8 +157,7 @@ if __name__ == '__main__':
             save_one_page(url)
 
     finally:
-        print("ÅÀÈ¡Íê³É")
-        print("Í£Ö¹ÔÚ" + str(stopCount) + "Ò³")
-        saveData()
+        print("ï¿½ï¿½È¡ï¿½ï¿½ï¿½")
+        print("Í£Ö¹ï¿½ï¿½" + str(stopCount) + "Ò³")
         # os.system("shutdown -s -t 10")
 

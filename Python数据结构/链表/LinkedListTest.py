@@ -1,5 +1,6 @@
 import LinkedList
-
+import os
+import sys
 
 def createLinkList() -> LinkedList:
     linkList = LinkedList.LinkedList()

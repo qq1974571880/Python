@@ -14,7 +14,7 @@ Hostreferer = {
 localBasicPath = "C:\\Github\\CLTxtTest\\"
 txtPath = "C:\\Github\\CLTxtTest\\"
 
-basicUrl = "https://cb.wpio.xyz"
+basicUrl = "https://cl.bbbck.xyz"
 startPath = basicUrl + "/thread0806.php?fid=16"
 
 stopCount = 0

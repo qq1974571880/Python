@@ -12,7 +12,7 @@ Picreferer = {
     'Referer': 'http://i.meizitu.net'
 }
 
-path = "C:\\Github\\91Result\\";
+path = "C:\\Github\\91Result\\"
 
 basicUrl = "http://www.91ta.xyz"
 startPath = basicUrl + "/list-read-id-34-p-"
