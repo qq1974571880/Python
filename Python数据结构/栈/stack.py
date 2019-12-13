@@ -5,35 +5,42 @@ class MyStack:
     def __init__(self):
 
         # 设置data为私有属性
-        self.data = []
+        self.__data = []
 
     # 进栈
-    def push(self, x: int):
-        self.data.append(x)
+    def push(self, x):
+        self.__data.append(x)
 
     # 出栈
     def pop(self):
-        if self.data:
-            del self.data[-1]
+        if self.__data:
+            result = self.__data[-1]
+            del self.__data[-1]
 
     # 获取栈顶元素
     def getTop(self):
-        return self.data[-1]
+        if self.__data:
+            return self.__data[-1]
+        else:
+            return None
 
     # 判断栈是否为空
-    def isEmpty(self):
-        if self.data:
+    def isEmpty(self) -> bool:
+        if self.__data:
             return False
         else:
             return True
 
+    def printStack(self):
+        return self.__data
 
-if __name__ == "__main__":
-    stack = MyStack()
-    print(stack.isEmpty())
-    stack.push(1)
-    stack.push(2)
-    print(stack.getTop())
-    stack.pop()
-    print(stack.isEmpty())
-    print(stack.getTop())
+
+# if __name__ == "__main__":
+#     stack = MyStack()
+#     print(stack.isEmpty())
+#     stack.push(1)
+#     stack.push(2)
+#     print(stack.getTop())
+#     stack.pop()
+#     print(stack.isEmpty())
+#     print(stack.getTop())
