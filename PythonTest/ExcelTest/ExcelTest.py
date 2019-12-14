@@ -60,6 +60,9 @@ def createCSV(resultList):
         sheetName = dic["sheetName"]
         dataFrame = pd.DataFrame(dic["data"])
         dataFrame.to_csv(folderPath + sheetName + ".csv", index=False, sep=',')
+    print("生成成功:")
+    print("生成路径为：" + os.getcwd() + "/" + folderPath)
+    print("生成文件" + str(len(resultList)) + "个")
 
 
 if __name__ == "__main__":
