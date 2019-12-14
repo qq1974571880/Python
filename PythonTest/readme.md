@@ -17,3 +17,7 @@
 ##### GarbageTest：
 
 ​	百度识图API，为大创项目《垃圾分类》 做准备。
+
+##### ExcelTest:
+
+​	根据Excel生成对应的CSV文件，为CSV测试做准备。
