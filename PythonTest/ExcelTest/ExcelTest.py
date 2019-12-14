@@ -29,8 +29,11 @@ def getExcelDataToList(excelPath) -> list:
                 c_type = ws.cell(row, col).ctype
                 c_cell = ws.cell_value(row, col)
 
+                if c_type == 1 and c_cell.strip() in ["None", "none", "Null", "null", ""]:
+                    c_cell = "None"
+
                 # 如果是整形
-                if c_type == 2 and c_cell % 1 == 0:
+                elif c_type == 2 and c_cell % 1 == 0:
                     c_cell = int(c_cell)
                 elif c_type == 3:
 
