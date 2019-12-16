@@ -22,6 +22,7 @@ class MyTest(unittest.TestCase):  # 继承unittest.TestCase
 
     def test_a_run(self):
         self.assertEqual(1, 1)  # 测试用例
+        print("test_a_run")
 
     def test_b_run(self):
         self.assertEqual(2, 2)  # 测试用例
