@@ -1,0 +1,6 @@
+case,exceptedResult,remarks
+case1,1,"1
+2
+3"
+case2,2,
+case3,FALSE,TRUE
