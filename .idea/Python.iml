@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Python数据结构/栈" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Python数据结构/队列" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python爬虫/CaoLiu" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

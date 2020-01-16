@@ -98,7 +98,7 @@ def saveOneAlbumText(url, name):
         for i in range(0, len(imgs)):
             urlList.append(imgs[i].get('data-src'))
         saveTxt(new_name+".txt", urlList)
-        print("ͼ��--" + name + "����ɹ�")
+        print("ͼ��--" + name + "����ɹ�?")
     else:
         print(new_name + "�Ѵ���")
 
@@ -116,11 +116,11 @@ def saveOneAlbum(url,name):
         for i in range(0,len(imgs)):
             try:
                 save_img(imgs[i].get('data-src'), i + 1, name)
-                print('���ڱ����' + str(i + 1) + '��ͼƬ')
+                print('���ڱ����?' + str(i + 1) + '��ͼƬ')
             except Exception as e:
                 print("except",e)
                 continue
-        print("ͼ��--" + name + "����ɹ�")
+        print("ͼ��--" + name + "����ɹ�?")
     else:
         print(new_name + "�Ѵ���")
 
@@ -157,7 +157,7 @@ if __name__ == '__main__':
             save_one_page(url)
 
     finally:
-        print("��ȡ���")
+        print("��ȡ���?")
         print("ֹͣ��" + str(stopCount) + "ҳ")
         # os.system("shutdown -s -t 10")
 
