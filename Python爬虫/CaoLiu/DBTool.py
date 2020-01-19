@@ -9,14 +9,14 @@ mydb = mysql.connector.connect(
 
 tableName = "pictures"
 
-mycursor = mydb.cursor()
+cursor = mydb.cursor()
 
 
 def insertSQL(name, urlPath):
     sql = "INSERT INTO " + tableName + " (name, urlPath) VALUES (%s, %s)"
     val = (name, urlPath)
     try:
-        mycursor.execute(sql, val)
+        cursor.execute(sql, val)
         mydb.commit()
     except:
         mydb.rollback()
@@ -27,14 +27,23 @@ def insertSQLs(names, urls):
     val = []
     for i in range(0, len(names)):
         val.append((names[i], urls[i]))
-    mycursor.executemany(sql, val)
+    cursor.executemany(sql, val)
     mydb.commit()  # 数据表内容有更新，必须使用到该语句
 
 
 def selectAll():
-    mycursor.execute("select * from pictures")
-    myresult = mycursor.fetchall()
-    return myresult
+    cursor.execute("select * from pictures")
+    results = cursor.fetchall()
+    return results
+
+
+def getNameList():
+    cursor.execute("select name from pictures")
+    results = cursor.fetchall()
+    listResult = []
+    for result in results:
+        listResult.append(str(result)[2:-3])
+    return listResult
 
 
 # def deleteAll():
