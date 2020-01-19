@@ -1,0 +1,12 @@
+删除垃圾数据：
+delete from pictures where name like '%删%' or name = "挂图了" or name = "图挂了" or name = "什么都没有" or name = "……" 
+or name = "[原创" or name = "[原创]"
+
+查找重复：
+select * from pictures where name in
+     (select name from pictures group by name having count(name)>1);
+
+select pictures.index, name, count(*) as c from pictures group by name having c > 1
+
+删除重复：
+SET SQL_SAFE_UPDATES = 0;  DELETE FROM pictures WHERE name IN ( SELECT t.name FROM ( SELECT name FROM pictures GROUP BY name HAVING COUNT(1) > 1 ) t ) AND pictures.index NOT IN ( SELECT dt.mindeptno FROM ( SELECT MIN(pictures.index) AS mindeptno FROM pictures GROUP BY name HAVING COUNT(1) > 1 ) dt )

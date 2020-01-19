@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8973ceb-fd4e-4ec2-bc10-f43912b0e41a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/19745.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/19745.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaoLiuTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/CaoLiuTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/getAllURL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/getAllURL.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -279,6 +276,7 @@
       <workItem from="1578212294499" duration="26000" />
       <workItem from="1579178600441" duration="242000" />
       <workItem from="1579178883779" duration="11603000" />
+      <workItem from="1579437020875" duration="1604000" />
     </task>
     <servers />
   </component>
