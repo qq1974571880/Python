@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import re
 
 Hostreferer = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
@@ -55,7 +56,17 @@ def getOnePage(htmlUrl):
         albums = albums[9:-1]
     for album in albums:
         wholeName = album.h3.a.string
+        wholeName = rename(wholeName)
         nameList.append(wholeName)
         wholeURL = album.h3.a.get('href')
-        urlList.append(wholeURL.split("htm_data")[1])
+        if ".html" in wholeURL:
+            urlList.append(wholeURL.split("htm_data")[1])
+        else:
+            urlList.append(wholeURL)
     return nameList, urlList
+
+
+def rename(name):
+    rstr = r'[\/\\\:\*\?\<\>\|]'
+    new_name = re.sub(rstr, "", name).replace(u'\xa0', u' ').replace('【', '[').replace('】', ']')
+    return new_name

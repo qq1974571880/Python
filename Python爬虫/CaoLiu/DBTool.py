@@ -8,6 +8,7 @@ mydb = mysql.connector.connect(
 )
 
 tableName = "pictures"
+# tableName = "photos"
 
 cursor = mydb.cursor()
 
@@ -18,7 +19,8 @@ def insertSQL(name, urlPath):
     try:
         cursor.execute(sql, val)
         mydb.commit()
-    except:
+    except Exception as e:
+        print(e)
         mydb.rollback()
 
 
@@ -45,6 +47,28 @@ def getNameList():
         listResult.append(str(result)[2:-3])
     return listResult
 
+
+# def updateSQL(name):
+#     sql = "UPDATE " + tableName + " SET hasDownload = 1 where name = %s"
+#     try:
+#         cursor.execute(sql, name)
+#         mydb.commit()
+#     except Exception as e:
+#         print(e)
+#         mydb.rollback()
+
+
+def updateSQLs(names):
+    try:
+        sql = "UPDATE " + tableName + " SET hasDownload = %s where name = %s"
+        val = []
+        for i in range(0, len(names)):
+            val.append((1, names[i]))
+        cursor.executemany(sql, val)
+        mydb.commit()  # 数据表内容有更新，必须使用到该语句
+    except Exception as e:
+        print(e)
+        mydb.rollback()
 
 # def deleteAll():
 #     sql = "truncate table " + tableName

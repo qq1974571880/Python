@@ -20,6 +20,7 @@ def deleteOldURL(nameList: list, urlList: list):
             urlList.remove(nameUrl)
     return nameList, urlList
 
+
 if __name__ == '__main__':
     try:
         for index in range(100):
@@ -36,6 +37,7 @@ if __name__ == '__main__':
             print("第" + str(index + 1) + "页下载完成")
 
     except Exception as e:
+        print(e)
         print("出现错误")
         print("停止在" + str(stopCount + 1) + "页")
     print("=======================")

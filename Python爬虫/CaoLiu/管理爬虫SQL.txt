@@ -10,3 +10,9 @@ select pictures.index, name, count(*) as c from pictures group by name having c 
 
 删除重复：
 SET SQL_SAFE_UPDATES = 0;  DELETE FROM pictures WHERE name IN ( SELECT t.name FROM ( SELECT name FROM pictures GROUP BY name HAVING COUNT(1) > 1 ) t ) AND pictures.index NOT IN ( SELECT dt.mindeptno FROM ( SELECT MIN(pictures.index) AS mindeptno FROM pictures GROUP BY name HAVING COUNT(1) > 1 ) dt )
+
+主键重新设置（删除数据后，主键序号断层）：
+alter table pictures AUTO_INCREMENT=1;
+
+查询日期为空（要用is null 而不是 = null）：
+select * from pictures where downloadDate is null
