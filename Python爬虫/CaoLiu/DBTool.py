@@ -7,13 +7,10 @@ mydb = mysql.connector.connect(
     database="pythonspider"
 )
 
-tableName = "pictures"
-# tableName = "photos"
-
 cursor = mydb.cursor()
 
 
-def insertSQL(name, urlPath):
+def insertSQL(name, urlPath, tableName):
     sql = "INSERT INTO " + tableName + " (name, urlPath) VALUES (%s, %s)"
     val = (name, urlPath)
     try:
@@ -24,7 +21,7 @@ def insertSQL(name, urlPath):
         mydb.rollback()
 
 
-def insertSQLs(names, urls):
+def insertSQLs(names, urls, tableName):
     sql = "INSERT INTO " + tableName + " (name, urlPath) VALUES (%s, %s)"
     val = []
     for i in range(0, len(names)):
@@ -33,14 +30,14 @@ def insertSQLs(names, urls):
     mydb.commit()  # 数据表内容有更新，必须使用到该语句
 
 
-def selectAll():
-    cursor.execute("select * from pictures")
+def selectAll(tableName):
+    cursor.execute("select * from " + tableName)
     results = cursor.fetchall()
     return results
 
 
-def getNameList():
-    cursor.execute("select name from pictures")
+def getNameList(tableName):
+    cursor.execute("select name from " + tableName)
     results = cursor.fetchall()
     listResult = []
     for result in results:
@@ -58,7 +55,7 @@ def getNameList():
 #         mydb.rollback()
 
 
-def updateSQLs(names):
+def updateSQLs(names, tableName):
     try:
         sql = "UPDATE " + tableName + " SET hasDownload = %s where name = %s"
         val = []
