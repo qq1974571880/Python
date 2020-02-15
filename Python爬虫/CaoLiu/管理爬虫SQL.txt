@@ -25,3 +25,6 @@ select * from pictures where downloadDate is null
 
 设置日期：
 update pictures set downloadDate = date_format("2020-01-20", "%y-%m-%d") where hasDownload = 1
+
+取消安全模式
+SET SQL_SAFE_UPDATES = 0;

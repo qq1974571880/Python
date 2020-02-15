@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import CommonResource
 import re
 
 Hostreferer = {
@@ -17,6 +18,7 @@ otherPhotoArea = basicUrl + "thread0806.php?fid=8/"
 stopCount = 0
 
 
+# 访问html文件
 def open_URL(htmlURL):
     try:
         req = requests.get(htmlURL, headers=Hostreferer, stream=True, timeout=30)
@@ -46,6 +48,7 @@ def get_html(htmlUrl):
     return htmlStr
 
 
+# 获取当前页面的所有标题以及对应网址
 def getOnePage(htmlUrl):
     html = get_html(htmlUrl)
     soup = BeautifulSoup(html, 'html.parser')
@@ -56,7 +59,7 @@ def getOnePage(htmlUrl):
         albums = albums[9:-1]
     for album in albums:
         wholeName = album.h3.a.string
-        wholeName = rename(wholeName)
+        wholeName = CommonResource.rename(wholeName)
         nameList.append(wholeName)
         wholeURL = album.h3.a.get('href')
         if ".html" in wholeURL:
@@ -66,7 +69,29 @@ def getOnePage(htmlUrl):
     return nameList, urlList
 
 
-def rename(name):
-    rstr = r'[\/\\\:\*\?\<\>\|]'
-    new_name = re.sub(rstr, "", name).replace(u'\xa0', u' ').replace('【', '[').replace('】', ']')
-    return new_name
+# 获取指定网址的全部图片
+def getURLListFromURL(url) -> list:
+    result = []
+    html = get_html(basicUrl + "htm_data" + url)
+    soup = BeautifulSoup(html, 'html.parser')
+    imgs = soup.findAll("img")
+    for i in range(0, len(imgs)):
+        if imgs[i].get('data-src') is not None:
+            result.append(imgs[i].get('data-src'))
+    if len(result) == 0:
+        imgs = soup.findAll("input")
+        for i in range(0, len(imgs)):
+            if imgs[i].get('data-src') is not None:
+                result.append(imgs[i].get('data-src'))
+    return result
+
+
+# 保存单张图片
+def save_img(img_url, picName, path):
+    if "gif" in img_url:
+        return
+    req = open_URL(img_url)
+    with open(path + '/' + picName + '.jpg', 'wb') as f:
+        f.write(req.content)
+        req.close()
+        time.sleep(0.5)

@@ -34,9 +34,11 @@ def update(tpmUrl, tableName):
                 break
             print("==================================================")
             print("第" + str(index + 1) + "页下载完成")
-            DBTool.insertSQLs(names, urls, tableName)
             print("本页更新内容为：")
             print(names)
+            print("正在更新数据库...")
+            DBTool.insertSQLs(names, urls, tableName)
+            print("数据库已更新")
             print("**************************************************")
 
     except Exception as e:
@@ -47,10 +49,19 @@ def update(tpmUrl, tableName):
     print("全部下载完成")
 
 
-if __name__ == '__main__':
-
-    # 自拍区
+# 自拍区
+def updatePictures():
     update(selfPhotoArea, "pictures")
 
-    # 写真区
-    # update(otherPhotoArea, "photos")
+
+# 写真区
+def updatePhotos():
+    update(otherPhotoArea, "photos")
+
+# if __name__ == '__main__':
+#
+#     # 自拍区
+#     # update(selfPhotoArea, "pictures")
+#
+#     # 写真区
+#     update(otherPhotoArea, "photos")

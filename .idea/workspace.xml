@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8973ceb-fd4e-4ec2-bc10-f43912b0e41a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/19745.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/19745.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/BeautifulSoupTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/BeautifulSoupTool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/DBTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/DBTool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/getAllURL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/getAllURL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/movePictures.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/updateURL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/updateURL.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python爬虫/CaoLiu/管理爬虫SQL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python爬虫/CaoLiu/管理爬虫SQL.txt" afterDir="false" />
     </list>
@@ -66,28 +70,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Test">
-    <configuration name="DBTool" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python爬虫/CaoLiu" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/DBTool.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="getAllURL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="downloadPic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,7 +105,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/getAllURL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/downloadPic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="movePictures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="downloadTxt" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,7 +127,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/movePictures.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/downloadTxt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="moveToFolder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools/moveToFolder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="updateURL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="update" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,7 +193,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/updateURL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python爬虫/CaoLiu/update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,10 +205,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Test" />
-        <item itemvalue="Python.updateURL" />
-        <item itemvalue="Python.movePictures" />
-        <item itemvalue="Python.DBTool" />
-        <item itemvalue="Python.getAllURL" />
+        <item itemvalue="Python.downloadPic" />
+        <item itemvalue="Python.update" />
+        <item itemvalue="Python.moveToFolder" />
+        <item itemvalue="Python.downloadTxt" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +286,20 @@
       <workItem from="1579437020875" duration="5953000" />
       <workItem from="1579516500797" duration="10289000" />
       <workItem from="1580635726547" duration="7354000" />
-      <workItem from="1580653374358" duration="344000" />
+      <workItem from="1580653374358" duration="551000" />
+      <workItem from="1580899963379" duration="2725000" />
+      <workItem from="1580992918289" duration="4417000" />
+      <workItem from="1581142578770" duration="15542000" />
+      <workItem from="1581217224878" duration="5600000" />
+      <workItem from="1581247884726" duration="1710000" />
+      <workItem from="1581250552966" duration="11481000" />
+      <workItem from="1581333898189" duration="6791000" />
+      <workItem from="1581342535054" duration="3773000" />
+      <workItem from="1581416847128" duration="12649000" />
+      <workItem from="1581589640981" duration="8000" />
+      <workItem from="1581589817639" duration="3000" />
+      <workItem from="1581590485796" duration="5118000" />
+      <workItem from="1581770323434" duration="611000" />
     </task>
     <servers />
   </component>
@@ -312,6 +329,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest28.coverage" NAME="CLPicDownloadTest28 Coverage Results" MODIFIED="1569321393792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest89.coverage" NAME="CLPicDownloadTest89 Coverage Results" MODIFIED="1569324221119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$csvTest.coverage" NAME="csvTest Coverage Results" MODIFIED="1575640104422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonTest/csvTest" />
+    <SUITE FILE_PATH="coverage/Python$moveToFolder.coverage" NAME="moveToFolder Coverage Results" MODIFIED="1581346311919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools" />
     <SUITE FILE_PATH="coverage/Python$exifreadTest.coverage" NAME="exifreadTest Coverage Results" MODIFIED="1567852413771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest4.coverage" NAME="CLPicDownloadTest4 Coverage Results" MODIFIED="1569320658632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest31.coverage" NAME="CLPicDownloadTest31 Coverage Results" MODIFIED="1569321676563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -335,7 +353,8 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest75.coverage" NAME="CLPicDownloadTest75 Coverage Results" MODIFIED="1569324161179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$DBTool.coverage" NAME="DBTool Coverage Results" MODIFIED="1579527609721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest82.coverage" NAME="CLPicDownloadTest82 Coverage Results" MODIFIED="1569324199690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$updateURL.coverage" NAME="updateURL Coverage Results" MODIFIED="1580646869089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
+    <SUITE FILE_PATH="coverage/Python$updateURL.coverage" NAME="updateURL Coverage Results" MODIFIED="1581171637311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
+    <SUITE FILE_PATH="coverage/Python$update.coverage" NAME="update Coverage Results" MODIFIED="1581417252959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest41.coverage" NAME="CLPicDownloadTest41 Coverage Results" MODIFIED="1569321707364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest46.coverage" NAME="CLPicDownloadTest46 Coverage Results" MODIFIED="1569321720575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest23.coverage" NAME="CLPicDownloadTest23 Coverage Results" MODIFIED="1569321379439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -354,6 +373,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest88.coverage" NAME="CLPicDownloadTest88 Coverage Results" MODIFIED="1569324218128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Garbage.coverage" NAME="Garbage Coverage Results" MODIFIED="1571137228546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest63.coverage" NAME="CLPicDownloadTest63 Coverage Results" MODIFIED="1569324124347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$mathFolderToDB.coverage" NAME="mathFolderToDB Coverage Results" MODIFIED="1581248746541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest33.coverage" NAME="CLPicDownloadTest33 Coverage Results" MODIFIED="1569321681278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$multiprocessingTest.coverage" NAME="multiprocessingTest Coverage Results" MODIFIED="1569419031988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest27.coverage" NAME="CLPicDownloadTest27 Coverage Results" MODIFIED="1569321390433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -375,7 +395,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest3.coverage" NAME="CLPicDownloadTest3 Coverage Results" MODIFIED="1569285132824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest49.coverage" NAME="CLPicDownloadTest49 Coverage Results" MODIFIED="1569321727934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest14.coverage" NAME="CLPicDownloadTest14 Coverage Results" MODIFIED="1569321020555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$Test.coverage" NAME="Test Coverage Results" MODIFIED="1580649457335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
+    <SUITE FILE_PATH="coverage/Python$Test.coverage" NAME="Test Coverage Results" MODIFIED="1581600114130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest55.coverage" NAME="CLPicDownloadTest55 Coverage Results" MODIFIED="1569321745279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest96.coverage" NAME="CLPicDownloadTest96 Coverage Results" MODIFIED="1569324333332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest10.coverage" NAME="CLPicDownloadTest10 Coverage Results" MODIFIED="1569285284199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -409,6 +429,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest69.coverage" NAME="CLPicDownloadTest69 Coverage Results" MODIFIED="1569324141909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest11.coverage" NAME="CLPicDownloadTest11 Coverage Results" MODIFIED="1569321012047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest76.coverage" NAME="CLPicDownloadTest76 Coverage Results" MODIFIED="1569324164210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$deleteEmptyFromDB.coverage" NAME="deleteEmptyFromDB Coverage Results" MODIFIED="1581338512515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest118.coverage" NAME="CLPicDownloadTest118 Coverage Results" MODIFIED="1569324449086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest17.coverage" NAME="CLPicDownloadTest17 Coverage Results" MODIFIED="1569321279186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$GUITool.coverage" NAME="GUITool Coverage Results" MODIFIED="1576683214675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonTools/ExcelToCSVTool/GUITool" />
@@ -426,6 +447,7 @@
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest97.coverage" NAME="CLPicDownloadTest97 Coverage Results" MODIFIED="1569324335305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest115.coverage" NAME="CLPicDownloadTest115 Coverage Results" MODIFIED="1569324439727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$movePictures.coverage" NAME="movePictures Coverage Results" MODIFIED="1579527663372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
+    <SUITE FILE_PATH="coverage/Python$downloadTxt.coverage" NAME="downloadTxt Coverage Results" MODIFIED="1581344960957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest21.coverage" NAME="CLPicDownloadTest21 Coverage Results" MODIFIED="1569321373799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest112.coverage" NAME="CLPicDownloadTest112 Coverage Results" MODIFIED="1569324411881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$91Test.coverage" NAME="91Test Coverage Results" MODIFIED="1568210989406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -435,12 +457,14 @@
     <SUITE FILE_PATH="coverage/Python$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1575552384564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python数据结构" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest54.coverage" NAME="CLPicDownloadTest54 Coverage Results" MODIFIED="1569321742274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest60.coverage" NAME="CLPicDownloadTest60 Coverage Results" MODIFIED="1569321760813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$insertFolderDB.coverage" NAME="insertFolderDB Coverage Results" MODIFIED="1581170240586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu/Tools" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest51.coverage" NAME="CLPicDownloadTest51 Coverage Results" MODIFIED="1569321734613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Queue.coverage" NAME="Queue Coverage Results" MODIFIED="1575866038949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python数据结构/队列" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest67.coverage" NAME="CLPicDownloadTest67 Coverage Results" MODIFIED="1569324134002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest84.coverage" NAME="CLPicDownloadTest84 Coverage Results" MODIFIED="1569324204845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest26.coverage" NAME="CLPicDownloadTest26 Coverage Results" MODIFIED="1569321387257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$pythonMySQLTest.coverage" NAME="pythonMySQLTest Coverage Results" MODIFIED="1579182280310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonTest/pythonMySQLTest" />
+    <SUITE FILE_PATH="coverage/Python$downloadPic.coverage" NAME="downloadPic Coverage Results" MODIFIED="1581433583509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python爬虫/CaoLiu" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest15.coverage" NAME="CLPicDownloadTest15 Coverage Results" MODIFIED="1569321025108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest43.coverage" NAME="CLPicDownloadTest43 Coverage Results" MODIFIED="1569321712341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$CLPicDownloadTest90.coverage" NAME="CLPicDownloadTest90 Coverage Results" MODIFIED="1569324224054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
